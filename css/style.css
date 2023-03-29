@@ -40,13 +40,13 @@ body{
   border: 1px solid white;
   aspect-ratio: 1/1;
 }
-.ten{
+.difficult-box{
   width: calc(100% / 10);
 }
-.nine{
+.medium-box{
   width: calc(100% / 9);
 }
-.seven{
+.easy-box{
   width: calc(100% / 7);
 }
 .box.clicked{

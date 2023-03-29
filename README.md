@@ -17,4 +17,5 @@ Aggiungere una select accanto al bottone di generazione, che fornisca una scelta
 - Genero il box con la classe "box";
 - Al click del box aggiungo la classe clicked e visualizzo in cosole l'id con il numero rispettivo al box cliccato;
 - Aggiungo una select per i 3 diversi livelli di difficoltà;
-- Creo 3 classi differenti con 3 larghezze dei box diverse, che poi andrò ad aggiungere al box a seconda della selezione fatta nella select; 
+- Creo 3 classi differenti con 3 larghezze dei box diverse, che poi andrò ad aggiungere al box a seconda della selezione fatta nella select;
+- Modifico il maxNumeriBox da realizzzre a seconda del livello;

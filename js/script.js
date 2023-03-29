@@ -1,22 +1,27 @@
 //ELEMENTS
 const play = document.querySelector('.play-button');
 const container = document.querySelector('.container');
+const levelsSelect = document.getElementById('levels');
+
 let counterBox = 0;
+let totBox;
 
 //aggiungo la classe hide al container
 container.classList.add('hide');
-console.log(container);
 
 //AZIONE PLAY
 play.addEventListener('click', function(){
-  //al click il button play prende la classe hide e il container la rimuove
+  //al click il button play e la select prendono la classe hide e il container la rimuove
   play.classList.add('hide');
+  levelsSelect.classList.add('hide');
   container.classList.remove('hide');
+  
+  const currentbox = createBox();
 
-  for(let i = 0; i < 100; i++){
+  for(let i = 0; i < totBox; i++){
     const currentbox = createBox();
     container.appendChild(currentbox);
-    //inserisco le condizioni a seconda dei livelli
+    console.log(totBox);    
 
     //aggiungo al box l'id con un numero progressivo da 1 a 100
     currentbox.boxId = i + 1;
@@ -37,6 +42,21 @@ play.addEventListener('click', function(){
 //genero il box
 function createBox(){
   const newBox = document.createElement('div');
-  newBox.className = 'box';  
-  return newBox;
+  newBox.className = 'box'; 
+  //inserisco le dimensioni del box e il numero tot dei box in base al livello selezionato
+  let indiceSelezionato = levelsSelect.selectedIndex;
+  let optionSelezionata = levelsSelect.options[indiceSelezionato];
+  let valueOption = optionSelezionata.value;
+
+  if(valueOption == easy.value){
+    newBox.classList.add('easy-box');
+    totBox = 49;
+  }else if(valueOption === medium.value){
+    newBox.classList.add('medium-box');
+    totBox = 81;
+  }else if(valueOption === difficult.value){
+    newBox.classList.add('difficult-box');
+    totBox = 100;
+  }
+  return newBox;  
 }
