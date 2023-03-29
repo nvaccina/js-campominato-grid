@@ -10,6 +10,9 @@ Aggiungere una select accanto al bottone di generazione, che fornisca una scelta
 - con difficoltà 2 => 81 caselle, con un numero compreso tra 1 e 81, divise in 9 caselle per 9 righe;
 - con difficoltà 3 => 49 caselle, con un numero compreso tra 1 e 49, divise in 7 caselle per 7 righe;
 ## Steps
-- Creare la struttra del container su html;
-- Dare stili al container e ai quadrati;
-- 
+- Creare la struttra del container, bottone e box su html;
+- Dare stili agli elementi;
+- Creare una costante per il container e una per il bottone;
+- Al click del bottone il container diventa display:block e il bottone display:none;
+- Genero il box con la classe "box";
+- Al click del box aggiungo la classe clicked e visualizzo in cosole l'id con il numero rispettivo al box cliccato;
